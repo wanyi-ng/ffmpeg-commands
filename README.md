@@ -15,7 +15,7 @@ ffmpeg -i input.mkv -c:v libx265 -c:a copy output.mkv
 `output.mkv`: Specifies the name of the output file. You can choose a different name and extension if desired (e.g., `output.mp4`). While H.265 can be in MP4 containers, MKV is also a suitable container for H.265.
 
 
-Optional parameters for quality and speed control:
+### Optional parameters for quality and speed control:
 
 You can further customize the H.265 encoding process using x265-params or by setting presets:
 
@@ -32,6 +32,6 @@ ffmpeg -i input.mkv -c:v libx265 -preset medium -c:a copy output.mkv
 (Common presets include ultrafast, superfast, fast, medium, slow, slower, veryslow).
 
 
-Important Notes:
+### Important Notes:
 - Ensure your FFmpeg build includes `libx265` support. Most static builds include it by default.
 - Encoding to H.265 can be computationally intensive and may take a significant amount of time, especially for high-resolution videos and slower presets.
