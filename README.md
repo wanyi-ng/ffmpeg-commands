@@ -5,9 +5,13 @@ ffmpeg -i input.mkv -c:v libx265 -c:a copy output.mkv
 ```
 
 `ffmpeg`: Invokes the FFmpeg program.
+
 `-i input.mkv`: Specifies the input file, in this case, an MKV file named `input.mkv`. Replace `input.mkv` with the actual name of your file.
+
 `-c:v libx265`: This is the core part of the command that instructs FFmpeg to use the `libx265` encoder for the video stream, which encodes the video in H.265 (HEVC).
+
 `-c:a copy`: This option copies the audio stream from the input file to the output file without re-encoding it. This saves time and maintains the original audio quality. If you want to re-encode the audio, you would specify a different audio codec (e.g., `-c:a aac`).
+
 `output.mkv`: Specifies the name of the output file. You can choose a different name and extension if desired (e.g., `output.mp4`). While H.265 can be in MP4 containers, MKV is also a suitable container for H.265.
 
 
